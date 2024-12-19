@@ -20,7 +20,7 @@ function App() {
         </div>
       </div>
       
-      <button className='py-3 px-3 mt-4 ml-3 rounded bg-blue-600 text-white' onClick={clickEvent}>
+      <button className='py-3 px-5 mt-4 rounded bg-blue-600 text-white hover:bg-blue-800 ml-5' onClick={clickEvent}>
         Save
       </button>
 
