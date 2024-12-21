@@ -5,7 +5,11 @@ export default {
     '!./src/Editor/JoditEditor.jsx', 
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'serif','sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

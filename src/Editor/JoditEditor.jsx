@@ -1,30 +1,29 @@
 import JoditEditor from 'jodit-react';
-import { useState } from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
 import settings from "../settings/settings.json";
+import TitleText from './TitleText';
 
-const Jodit = ({ onContentChange }) => {
-  const [content, setContent] = useState('');
-
-  // Pass content changes to parent component
-  const handleChange = (newContent) => {
-    setContent(newContent);
-    onContentChange(newContent); // Update content in the parent component
-  }
-
+const Jodit = ({ value, onContentChange, editorRef }) => {
   return (
-    <div>
-      <JoditEditor
-        value={content}
-        onChange={handleChange}
-        config={settings} />
-    </div>
+    <section>
+      <TitleText />
+      <div>
+        <JoditEditor
+          value={value} 
+          onBlur={onContentChange} 
+          config={settings}
+          ref={editorRef} 
+        />
+      </div>
+    </section>
   );
-}
+};
 
 // PropTypes validation
 Jodit.propTypes = {
-  onContentChange: PropTypes.func.isRequired, // Ensure it's a function
+  value: PropTypes.string.isRequired, 
+  onContentChange: PropTypes.func.isRequired,
+  editorRef: PropTypes.object.isRequired, 
 };
 
 export default Jodit;

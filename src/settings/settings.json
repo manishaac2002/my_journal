@@ -28,17 +28,13 @@
   "enableVideoUpload": false,
   "toolbarSticky": true,
   "readOnly": false,
+  "toolbar": true,
   "toolbarAdaptive": true,
   "showCharsCounter": true,
   "showWordsCounter": true,
   "showXPathInStatusbar": true,
-  "placeholder": "Start typing...",
-  "defaultMode": "wysiwyg",
-  "iframe": true, 
-  "iframeCSSLinks": ["./src/index.css"], 
-  "style": {
-    "fontFamily": "inherit"
-  }
+  "placeholder": "Start typing your journal here...",
+  "defaultMode": "wysiwyg"
   }
   
 

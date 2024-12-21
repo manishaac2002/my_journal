@@ -26,4 +26,8 @@ h1 {
   h6 {
     @apply text-base font-light;
   }
+  input {
+    border: none !important;
+    outline: none !important;
+  }
   
